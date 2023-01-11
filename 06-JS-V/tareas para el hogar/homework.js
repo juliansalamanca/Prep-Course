@@ -35,7 +35,7 @@ function agregarStringInvertida() {
   // Ej: 'menem'.reverse() => menem
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
-  string.prototype.reverse = function(){
+  String.prototype.reverse = function(){
     var StringInvertida = '';
     for(var i=this.length - 1; i>= 0; i-- ){
       StringInvertida = StringInvertida + this[i];
@@ -89,7 +89,7 @@ function agregarMetodo() {
   //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve: 
   //Ej: "Juan, 22 años"
   Persona.prototype.datos = function (){
-    return (this.nombre + ',' + this.edad + 'años');
+    return (Persona['nombre'] + ',' + Persona['edad'] + 'años');
   }
 }
   
